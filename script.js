@@ -41,7 +41,7 @@ function displayBooks() {
     myLibrary.forEach((book) => {
         const bookdiv = document.createElement("div");
         bookdiv.setAttribute("class", book.title);
-        bookdiv.setAttribute("id", `book${count}`);
+        bookdiv.setAttribute("id", count);
         for (info in book) {
             const book_info = document.createElement("div");
             book_info.textContent = book[info];
@@ -54,7 +54,21 @@ function displayBooks() {
             myLibrary.splice(bookdiv.id, 1);
             displayBooks();
         })
+
+        const read_status = document.createElement("button");
+        read_status.setAttribute("class", "read-status");
+        read_status.textContent = "Change Read Status";
+        read_status.addEventListener("click",() => {
+            if (myLibrary[bookdiv.id].read === "read") {
+                myLibrary[bookdiv.id].read = "not read";
+            } else {
+                myLibrary[bookdiv.id].read = "read";
+            }
+            displayBooks();
+        })
+
         bookdiv.append(cancel_button);
+        bookdiv.append(read_status);
         container.append(bookdiv);
         count++;
     })
