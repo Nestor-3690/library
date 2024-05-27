@@ -4,6 +4,8 @@ const openform = document.querySelector("#openform");
 const dialog = document.querySelector("#dialog");
 const submit = document.querySelector("#submit");
 
+const container = document.querySelector(".container");
+
 openform.addEventListener("click", () => {
     dialog.showModal();
 })
