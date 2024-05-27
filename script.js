@@ -37,14 +37,25 @@ function addBookToLibrary(title, author, pages, read) {
 
 function displayBooks() {
     container.textContent = '';
+    let count = 0;
     myLibrary.forEach((book) => {
         const bookdiv = document.createElement("div");
         bookdiv.setAttribute("class", book.title);
+        bookdiv.setAttribute("id", `book${count}`);
         for (info in book) {
             const book_info = document.createElement("div");
             book_info.textContent = book[info];
             bookdiv.append(book_info);
         }
+        const cancel_button = document.createElement("button");
+        cancel_button.setAttribute("class", "cancel");
+        cancel_button.textContent = "Remove";
+        cancel_button.addEventListener("click", () => {
+            myLibrary.splice(bookdiv.id, 1);
+            displayBooks();
+        })
+        bookdiv.append(cancel_button);
         container.append(bookdiv);
+        count++;
     })
 }
