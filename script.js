@@ -40,7 +40,7 @@ function displayBooks() {
     let count = 0;
     myLibrary.forEach((book) => {
         const bookdiv = document.createElement("div");
-        bookdiv.setAttribute("class", book.title);
+        bookdiv.setAttribute("class", "book");
         bookdiv.setAttribute("id", count);
         for (info in book) {
             const book_info = document.createElement("div");
