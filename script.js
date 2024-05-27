@@ -63,7 +63,7 @@ function displayBooks() {
                 } else if (info == "read") {
                     book_info.setAttribute("class", "read");
                 }
-                book_info.textContent += book[info];
+                book_info.textContent = book[info];
                 bookdiv.append(book_info);
             }
         }
