@@ -95,7 +95,6 @@ main {
     background-color: #fde68a;
     border-radius: 5px;
     font-size: 1.25rem;
-    box-shadow: 0px 0px 3px 1px lightgray;
 }
 
 #openform:hover {
@@ -106,6 +105,7 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(333px, 1fr));
     gap: 5rem 10rem;
+    padding: 0rem 1.5rem;
 }
 
 .book {
@@ -115,6 +115,7 @@ main {
     grid-template-columns: 1fr 1fr;
     gap: 2rem 1rem;
     font-family: "cinzel";
+    border-radius: 3px;
 }
 
 .book .title, .book .author, .book .pages, .book .read {
