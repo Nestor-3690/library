@@ -56,16 +56,12 @@ function displayBooks() {
                 const book_info = document.createElement("div");
                 if (info === "title") {
                     book_info.setAttribute("class", "title");
-                    book_info.textContent = "Title: "
                 } else if (info === "author") {
                     book_info.setAttribute("class", "author");
-                    book_info.textContent = "Author: "
                 } else if (info === "pages") {
                     book_info.setAttribute("class", "pages");
-                    book_info.textContent = "Pages: "
                 } else if (info == "read") {
                     book_info.setAttribute("class", "read");
-                    book_info.textContent = "Read Status: "
                 }
                 book_info.textContent += book[info];
                 bookdiv.append(book_info);
