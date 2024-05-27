@@ -28,6 +28,13 @@ function Book(title, author, pages, read) {
     this.author = author;
     this.pages = pages;
     this.read = read;
+    this.changeReadStatus = function() {
+        if (this.read === "read") {
+            this.read = "not read";
+        } else {
+            this.read = "read";
+        }
+    }
 }
 
 function addBookToLibrary(title, author, pages, read) {
@@ -72,11 +79,7 @@ function displayBooks() {
         read_status.setAttribute("class", "read-status");
         read_status.textContent = "Change Read Status";
         read_status.addEventListener("click",() => {
-            if (myLibrary[bookdiv.id].read === "read") {
-                myLibrary[bookdiv.id].read = "not read";
-            } else {
-                myLibrary[bookdiv.id].read = "read";
-            }
+            myLibrary[bookdiv.id].changeReadStatus();
             displayBooks();
         })
 
