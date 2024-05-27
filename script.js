@@ -36,6 +36,7 @@ function addBookToLibrary(title, author, pages, read) {
 }
 
 function displayBooks() {
+    container.textContent = '';
     myLibrary.forEach((book) => {
         const bookdiv = document.createElement("div");
         bookdiv.setAttribute("class", book.title);
