@@ -44,7 +44,20 @@ function displayBooks() {
         bookdiv.setAttribute("id", count);
         for (info in book) {
             const book_info = document.createElement("div");
-            book_info.textContent = book[info];
+            if (info === "title") {
+                book_info.setAttribute("class", "title");
+                book_info.textContent = "Title: "
+            } else if (info === "author") {
+                book_info.setAttribute("class", "author");
+                book_info.textContent = "Author: "
+            } else if (info === "pages") {
+                book_info.setAttribute("class", "pages");
+                book_info.textContent = "Pages: "
+            } else {
+                book_info.setAttribute("class", "read");
+                book_info.textContent = "Read Status: "
+            }
+            book_info.textContent += book[info];
             bookdiv.append(book_info);
         }
         const cancel_button = document.createElement("button");
