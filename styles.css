@@ -167,3 +167,30 @@ footer a {
     font-size: 1.2rem;
     letter-spacing: 0.5px;
 }
+
+dialog {
+    padding: 2.5rem;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px white;
+    font-size: 1.5rem;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    row-gap: 1rem;
+    align-items: center;
+}
+
+form button {
+    padding: 1rem 2rem;
+    grid-column: 1 / 3;
+    background-color: #fef08a;
+    border-radius: 5px;
+    justify-self: center;
+}
+
+form button:hover {
+    background-color: #fde047;
+}
