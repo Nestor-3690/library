@@ -8,27 +8,27 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <header>
+        <div class="header-title">My Library</div>
+        <div class="header-text">You can add your books inside this library.</div>
+    </header>
     <button id="openform">New Book</button>
-    
-    <dialog id="dialog">
-        <form>
-            <label for="title">Title: </label>
-            <input type="text" id="title" name="title" required>
 
-            <label for="author">Author: </label>
-            <input type="text" id="author" name="author" required>
-
-            <label for="pages">Pages: </label>
-            <input type="tel" id="pages" name="pages" required>
-
-            <label for="read">Read? </label>
-            <input type="checkbox" id="read" name="read" value="read">
-            <button id="submit">Submit</button>
-        </form>
-    </dialog>
-
-    <div class="container">
-        
-    </div>
+    <main>
+        <dialog id="dialog">
+            <form>
+                <label for="title">Title: </label>
+                <input type="text" id="title" name="title" required>
+                <label for="author">Author: </label>
+                <input type="text" id="author" name="author" required>
+                <label for="pages">Pages: </label>
+                <input type="tel" id="pages" name="pages" required>
+                <label for="read">Read? </label>
+                <input type="checkbox" id="read" name="read" value="read">
+                <button id="submit">Submit</button>
+            </form>
+        </dialog>
+        <div class="container"></div>
+    </main>
 </body>
 </html>
