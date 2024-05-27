@@ -18,6 +18,7 @@ submit.addEventListener("click", (event) => {
         read.value = "not read";
     }
     addBookToLibrary(title.value, author.value, pages.value, read.value);
+    displayBooks();
     dialog.close();
 
 })
@@ -32,4 +33,17 @@ function Book(title, author, pages, read) {
 function addBookToLibrary(title, author, pages, read) {
     const book = new Book(title, author, pages, read);
     myLibrary.push(book);
+}
+
+function displayBooks() {
+    myLibrary.forEach((book) => {
+        const bookdiv = document.createElement("div");
+        bookdiv.setAttribute("class", book.title);
+        for (info in book) {
+            const book_info = document.createElement("div");
+            book_info.textContent = book[info];
+            bookdiv.append(book_info);
+        }
+        container.append(bookdiv);
+    })
 }
