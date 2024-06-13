@@ -37,6 +37,8 @@ function Library() {
   const submit = document.querySelector("#submit");
   const container = document.querySelector(".container");
 
+  const titleError = document.querySelector("#title + span.error");
+
   openform.addEventListener("click", () => {
     dialog.showModal();
   });
@@ -44,6 +46,9 @@ function Library() {
   submit.addEventListener("click", (event) => {
     event.preventDefault();
     if (form.checkValidity() === false) {
+      if (title.validity.valueMissing) {
+        titleError.textContent = "A Title is required";
+      }
       return;
     }
     if (read.checked) {
