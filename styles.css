@@ -200,6 +200,10 @@ form {
 
 span.error {
   grid-column: 1 / 3;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: red;
+  justify-self: end;
 }
 
 input {
