@@ -38,6 +38,7 @@ function Library() {
   const container = document.querySelector(".container");
 
   const titleError = document.querySelector("#title + span.error");
+  const authorError = document.querySelector("#author + span.error");
 
   openform.addEventListener("click", () => {
     dialog.showModal();
@@ -48,6 +49,9 @@ function Library() {
     if (form.checkValidity() === false) {
       if (title.validity.valueMissing) {
         titleError.textContent = "A Title is required";
+      }
+      if (author.validity.valueMissing) {
+        authorError.textContent = "An Author is required";
       }
       return;
     }
