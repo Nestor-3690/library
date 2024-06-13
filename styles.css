@@ -1,196 +1,211 @@
-@import 'modern-normalize/modern-normalize.css';
+@import "modern-normalize/modern-normalize.css";
 
 @font-face {
-    font-family: "sevillana";
-    src: url("fonts/Sevillana/Sevillana-Regular.ttf")
+  font-family: "sevillana";
+  src: url("fonts/Sevillana/Sevillana-Regular.ttf");
 }
 
 @font-face {
-    font-family: "merienda";
-    src: url("fonts/Merienda/Merienda-VariableFont_wght.ttf")
+  font-family: "merienda";
+  src: url("fonts/Merienda/Merienda-VariableFont_wght.ttf");
 }
 
 @font-face {
-    font-family: "cinzel";
-    src: url("fonts/Cinzel/Cinzel-VariableFont_wght.ttf")
+  font-family: "cinzel";
+  src: url("fonts/Cinzel/Cinzel-VariableFont_wght.ttf");
 }
 
 @font-face {
-    font-family: "Roboto";
-    src: url("fonts/Roboto/Roboto-Regular.ttf")
+  font-family: "Roboto";
+  src: url("fonts/Roboto/Roboto-Regular.ttf");
 }
-
 
 /* CSS Reset */
 
-h1, h2, h3, h4, h5, figure, p, ol, ul {
-    margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+p,
+ol,
+ul {
+  margin: 0;
 }
 
-ol, ul {
-    list-style: none;
-    padding-inline: 0;
+ol,
+ul {
+  list-style: none;
+  padding-inline: 0;
 }
 
-h1, h2, h3, h4, h5 {
-    font-size: inherit;
-    font-weight: inherit;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 img {
-    display: block;
-    max-inline-size: 100%;
+  display: block;
+  max-inline-size: 100%;
 }
 
 /* End of reset */
 :root {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    font-family: "Roboto";
-    background-image: url("images/library.jpg");
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-family: "Roboto";
+  background-image: url("images/library.jpg");
 }
 
 button {
-    border: none;
-    outline: none;
-    position: relative;
-    transition: all 0.5s;
-    font-family: "Roboto";
+  border: none;
+  outline: none;
+  position: relative;
+  transition: all 0.5s;
+  font-family: "Roboto";
 }
 
 button:active {
-    top: 2px;
-} 
+  top: 2px;
+}
 
 header {
-    background-color: #6ee7b7;
-    text-align: center;
-    padding: 2rem;
+  background-color: #6ee7b7;
+  text-align: center;
+  padding: 2rem;
 }
 
 .header-title {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-family: "merienda";
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: "merienda";
 }
 
 .header-text {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
 }
 
 #openform {
-    align-self: center;
-    padding: 1rem;
-    background-color: #fde68a;
-    border-radius: 5px;
-    font-size: 1.25rem;
+  align-self: center;
+  padding: 1rem;
+  background-color: #fde68a;
+  border-radius: 5px;
+  font-size: 1.25rem;
 }
 
 #openform:hover {
-    background-color: #fcd34d;
+  background-color: #fcd34d;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(333px, 1fr));
-    gap: 5rem 10rem;
-    padding: 0rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(333px, 1fr));
+  gap: 5rem 10rem;
+  padding: 0rem 1.5rem;
 }
 
 .book {
-    padding: 2rem 1rem;
-    display: grid;
-    background-color: #ecfeff;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem 1rem;
-    font-family: "cinzel";
-    border-radius: 3px;
+  padding: 2rem 1rem;
+  display: grid;
+  background-color: #ecfeff;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 1rem;
+  font-family: "cinzel";
+  border-radius: 3px;
 }
 
-.book .title, .book .author, .book .pages, .book .read {
-    grid-column: 1 / 3;
-    justify-self: center;
-    font-size: 2rem;
+.book .title,
+.book .author,
+.book .pages,
+.book .read {
+  grid-column: 1 / 3;
+  justify-self: center;
+  font-size: 2rem;
 }
 
 .book .title {
-    font-family: "sevillana";
-    font-size: 3rem;
+  font-family: "sevillana";
+  font-size: 3rem;
 }
 
 .book .author::before {
-    content: "by ";
-    font-size: 1.25rem;
+  content: "by ";
+  font-size: 1.25rem;
 }
 
 .book .pages::after {
-    content: " pages";
-    font-size: 1.25rem;
+  content: " pages";
+  font-size: 1.25rem;
 }
 
 .book button {
-    height: 3rem;
-    position: relative;
-    background-color: #fecaca;
-    border: none;
-    font-size: 1.5rem;
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px 1px #fef2f2;
+  height: 3rem;
+  position: relative;
+  background-color: #fecaca;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 1px #fef2f2;
 }
 
 .book button:hover {
-    background-color: #fca5a5;
+  background-color: #fca5a5;
 }
 
 footer {
-    margin-top: auto;
-    background-color: #0c4a6e;
-    color: white;
-    text-align: center;
+  margin-top: auto;
+  background-color: #0c4a6e;
+  color: white;
+  text-align: center;
 }
 
 footer a {
-    color: lightgray;
-    text-decoration: none;
-    font-size: 1.2rem;
-    letter-spacing: 0.5px;
+  color: lightgray;
+  text-decoration: none;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
 }
 
 dialog {
-    padding: 2.5rem;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px white;
-    font-size: 1.5rem;
+  padding: 2.5rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px white;
+  font-size: 1.5rem;
 }
 
 form {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    row-gap: 1rem;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  row-gap: 1rem;
+  align-items: center;
 }
 
 form button {
-    padding: 1rem 2rem;
-    grid-column: 1 / 3;
-    background-color: #fef08a;
-    border-radius: 5px;
-    justify-self: center;
+  padding: 1rem 2rem;
+  grid-column: 1 / 3;
+  background-color: #fef08a;
+  border-radius: 5px;
+  justify-self: center;
 }
 
 form button:hover {
-    background-color: #fde047;
+  background-color: #fde047;
 }
