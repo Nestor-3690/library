@@ -31,6 +31,7 @@ function Library() {
   const library = Library();
   const myLibrary = library.getLibrary();
 
+  const form = document.querySelector("form");
   const openform = document.querySelector("#openform");
   const dialog = document.querySelector("#dialog");
   const submit = document.querySelector("#submit");
@@ -42,6 +43,9 @@ function Library() {
 
   submit.addEventListener("click", (event) => {
     event.preventDefault();
+    if (form.checkValidity() === false) {
+      return;
+    }
     if (read.checked) {
       read.value = "read";
     } else {
