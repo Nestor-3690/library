@@ -37,6 +37,7 @@ function Library() {
   const submit = document.querySelector("#submit");
   const container = document.querySelector(".container");
 
+  const titleInput = document.querySelector("#title");
   const titleError = document.querySelector("#title + span.error");
   const authorError = document.querySelector("#author + span.error");
   const pagesError = document.querySelector("#pages + span.error");
@@ -46,6 +47,14 @@ function Library() {
     titleError.textContent = "";
     authorError.textContent = "";
     pagesError.textContent = "";
+  });
+
+  titleInput.addEventListener("input", () => {
+    if (!titleInput.validity.valid) {
+      titleError.textContent = "A Title is required";
+    } else {
+      titleError.textContent = "";
+    }
   });
 
   submit.addEventListener("click", (event) => {
