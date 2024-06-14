@@ -38,6 +38,7 @@ function Library() {
   const container = document.querySelector(".container");
 
   const titleInput = document.querySelector("#title");
+  const authorInput = document.querySelector("#author");
   const titleError = document.querySelector("#title + span.error");
   const authorError = document.querySelector("#author + span.error");
   const pagesError = document.querySelector("#pages + span.error");
@@ -54,6 +55,14 @@ function Library() {
       titleError.textContent = "A Title is required";
     } else {
       titleError.textContent = "";
+    }
+  });
+
+  authorInput.addEventListener("input", () => {
+    if (!authorInput.validity.valid) {
+      authorError.textContent = "An Author is required";
+    } else {
+      authorError.textContent = "";
     }
   });
 
