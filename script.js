@@ -43,6 +43,9 @@ function Library() {
 
   openform.addEventListener("click", () => {
     dialog.showModal();
+    titleError.textContent = "";
+    authorError.textContent = "";
+    pagesError.textContent = "";
   });
 
   submit.addEventListener("click", (event) => {
