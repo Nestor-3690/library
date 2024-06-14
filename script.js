@@ -39,6 +39,7 @@ function Library() {
 
   const titleInput = document.querySelector("#title");
   const authorInput = document.querySelector("#author");
+  const pagesInput = document.querySelector("#pages");
   const titleError = document.querySelector("#title + span.error");
   const authorError = document.querySelector("#author + span.error");
   const pagesError = document.querySelector("#pages + span.error");
@@ -63,6 +64,18 @@ function Library() {
       authorError.textContent = "An Author is required";
     } else {
       authorError.textContent = "";
+    }
+  });
+
+  pagesInput.addEventListener("input", () => {
+    if (!pagesInput.validity.valid) {
+      if (pages.validity.valueMissing) {
+        pagesError.textContent = "A number of Pages is required";
+      } else if (pages.validity.rangeUnderflow) {
+        pagesError.textContent = `The book can't have ${pages.value} pages!`;
+      }
+    } else {
+      pagesError.textContent = "";
     }
   });
 
