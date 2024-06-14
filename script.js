@@ -39,6 +39,7 @@ function Library() {
 
   const titleError = document.querySelector("#title + span.error");
   const authorError = document.querySelector("#author + span.error");
+  const pagesError = document.querySelector("#pages + span.error");
 
   openform.addEventListener("click", () => {
     dialog.showModal();
@@ -52,6 +53,9 @@ function Library() {
       }
       if (author.validity.valueMissing) {
         authorError.textContent = "An Author is required";
+      }
+      if (pages.validity.valueMissing) {
+        pagesError.textContent = "Number of Pages is required";
       }
       return;
     }
